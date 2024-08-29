@@ -7,7 +7,6 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
@@ -25,7 +24,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.artspace.ui.theme.ArtSpaceTheme
-import dev.codeninja.artspace.ui.theme.ArtSpaceTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +31,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ArtSpaceTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
+                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
                     ArtSpaceScreen()
                 }
             }
@@ -104,9 +102,6 @@ fun ArtSpaceScreen(modifier: Modifier = Modifier) {
                         }
                     }
                 },
-                colors = ButtonDefaults.buttonColors(
-                    backgroundColor = colorResource(id = R.color.purple_200)
-                ),
                 elevation = ButtonDefaults.elevatedButtonElevation(
                     defaultElevation = 1.dp,
                     pressedElevation = 0.dp,
@@ -147,9 +142,6 @@ fun ArtSpaceScreen(modifier: Modifier = Modifier) {
                         }
                     }
                 },
-                colors = ButtonDefaults.buttonColors(
-                    backgroundColor = colorResource(id = R.color.blue_300)
-                ),
                 elevation = ButtonDefaults.elevatedButtonElevation(
                     defaultElevation = 1.dp,
                     pressedElevation = 0.dp,
