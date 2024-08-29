@@ -41,17 +41,17 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ArtSpaceScreen(modifier: Modifier = Modifier) {
-    val firstArtwork = R.drawable.denji_face
-    val secondArtwork = R.drawable.zero_two_face
-    val thirdArtwork = R.drawable.sanji_face
-    val fourthArtwork = R.drawable.naruto_face
+    val firstArtwork = R.drawable.bmw
+    val secondArtwork = R.drawable.audi
+    val thirdArtwork = R.drawable.mercedes
+    val fourthArtwork = R.drawable.audi2
 
     var title by remember {
-        mutableStateOf(R.string.denji)
+        mutableStateOf(R.string.BMW)
     }
 
     var year by remember {
-        mutableStateOf(R.string.denji_year)
+        mutableStateOf(R.string.BMW_year)
     }
 
     var currentArtwork by remember {
@@ -82,23 +82,23 @@ fun ArtSpaceScreen(modifier: Modifier = Modifier) {
                     when (currentArtwork) {
                         firstArtwork -> {
                             currentArtwork = fourthArtwork
-                            title = R.string.naruto
-                            year = R.string.naruto_year
+                            title = R.string.BMW
+                            year = R.string.BMW_year
                         }
                         secondArtwork -> {
                             currentArtwork = firstArtwork
-                            title = R.string.denji
-                            year = R.string.denji_year
+                            title = R.string.Audi
+                            year = R.string.Audi_year
                         }
                         thirdArtwork -> {
                             currentArtwork = secondArtwork
-                            title = R.string.zero_two
-                            year = R.string.zero_two_year
+                            title = R.string.Mercedes
+                            year = R.string.Mercedes_year
                         }
                         else -> {
                             currentArtwork = thirdArtwork
-                            title = R.string.sanji
-                            year = R.string.sanji_year
+                            title = R.string.Audi2
+                            year = R.string.Audi2_year
                         }
                     }
                 },
@@ -122,23 +122,23 @@ fun ArtSpaceScreen(modifier: Modifier = Modifier) {
                     when (currentArtwork) {
                         firstArtwork -> {
                             currentArtwork = secondArtwork
-                            title = R.string.zero_two
-                            year = R.string.zero_two_year
+                            title = R.string.Audi
+                            year = R.string.Audi_year
                         }
                         secondArtwork -> {
                             currentArtwork = thirdArtwork
-                            title = R.string.sanji
-                            year = R.string.sanji_year
+                            title = R.string.Mercedes
+                            year = R.string.Mercedes_year
                         }
                         thirdArtwork -> {
                             currentArtwork = fourthArtwork
-                            title = R.string.naruto
-                            year = R.string.naruto_year
+                            title = R.string.Audi2
+                            year = R.string.Audi2_year
                         }
                         else -> {
                             currentArtwork = firstArtwork
-                            title = R.string.denji
-                            year = R.string.denji_year
+                            title = R.string.BMW
+                            year = R.string.BMW_year
                         }
                     }
                 },
@@ -166,7 +166,7 @@ fun ArtworkDisplay(
 ) {
     Image(
         painter = painterResource(currentArtwork),
-        contentDescription = stringResource(id = R.string.zero_two),
+        contentDescription = stringResource(id = R.string.Audi),
         modifier = modifier.fillMaxWidth(),
         contentScale = ContentScale.FillWidth
     )
